@@ -1,0 +1,313 @@
+/* Alicia Green */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Molle:ital@1&display=swap');
+
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output,
+ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --yellow: #F6D64A;
+  --teal: #55BCD5;
+  --purple: #9B26B0;
+  --blue: #499BD2;
+  --dark-gray: #222222;
+  --light-gray: #EAEAEA;
+  --white: #FFFFFF;
+  --black: #000000;
+
+  --font-heading: 'Molle', cursive;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 1.5rem;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: left;
+  padding: 2rem 1rem;
+  background-color: var(--teal);
+}
+
+header img {
+  max-width: 180px;
+  margin-bottom: 1rem;
+}
+
+header p {
+  color: var(--dark-gray);
+  margin-top: 0.5rem;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--white);
+  color: var(--dark-gray);
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--black);
+  font-size: 1.75rem;
+}
+
+h4, p, q, small, nav, button, input, select, textarea, label {
+  font-family: var(--font-body);
+}
+
+nav {
+  background-color: var(--teal);
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  background-color: var(--yellow);
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--black);
+}
+
+.hero h1 {
+  font-size: 2rem;
+}
+
+.hero p {
+  font-size: 1rem;
+}
+
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.image-gallery img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .image-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-gallery img {
+    width: 90%;
+    max-width: none;
+  }
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  background-color: var(--yellow);
+  color: var(--purple);
+  margin-bottom: 1rem;
+}
+
+.icon {
+  background-color: var(--teal);
+  color: var(--white);
+  border: 2px solid var(--white);
+  padding: 1rem;
+  display: inline-block;
+  border-radius: 8px;
+  font-size: 2rem;
+  box-shadow: 0 0 0 4px var(--blue);
+}
+
+.card {
+  background-color: var(--teal);
+  color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+.testimonial {
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  color: var(--blue);
+}
+
+form {
+  background-color: var(--white);
+  padding: 1rem;
+  border: 1px solid var(--purple);
+  border-radius: 8px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
+}
+
+form input[type="radio"] {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--purple);
+  border-radius: 50%;
+  background-color: var(--white);
+  position: relative;
+}
+
+form input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--purple);
+  border-radius: 50%;
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+}
+
+form button {
+  background-color: var(--purple);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: var(--blue);
+}
+
+
+footer {
+  background-color: var(--dark-gray);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.875rem;
+}
+
+footer a {
+  color: var(--teal);
+  text-decoration: underline;
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+@media (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  h1, h2, h3 {
+    font-size: 2.25rem;
+  }
+
+  form {
+    padding: 2rem;
+  }
+
+  form button {
+    width: auto;
+  }
+
+  body {
+    padding: 2rem;
+  }
+}
